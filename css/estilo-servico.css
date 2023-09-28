@@ -1,0 +1,707 @@
+/* #region global */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    background-color: #171717;
+    color: aliceblue;
+    font-family: 'Inter', sans-serif;
+}
+
+.site{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+/* #endregion global*/
+
+/* #region topo*/
+.logo{
+    margin-top: 15px;
+}
+
+.topo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topo nav ul, div ul{
+    display: flex;
+    align-items: center;
+}
+
+.menu-abrir, .menu-fechar{
+    display: none;
+}
+
+.menu a:hover{
+    color:  #636363;
+}
+
+.menu ul li a{
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 35px;
+    border-radius: 40px;
+    margin-right: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+}
+
+.linha{
+    display: none;
+}
+
+.btnMenu button{
+    font-family: 'Inter', sans-serif;
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.726);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+  
+.btnMenu button:hover {
+    background-color: #2A92A9;
+    box-shadow: 0px 5px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+  
+.btnMenu button:active {
+    transform: translateY(-1px);
+    background-color: #584bd1;
+}
+
+.login-menu{
+    display: none;
+}
+
+/* #endregion topo */
+
+
+/* #region serviços */
+.servicos h2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 27px;
+    color: #2A92A9;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.servicos p{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.servico1{
+    width: 45%;
+    height: 200px;   
+}
+
+.servico2{
+    width: 45%;
+    height: 200px;
+    margin-left: 12px;
+}
+
+.servico3{
+    width: 45%;
+    height: 200px;
+
+}
+
+.cont-servicos{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 70px;
+    flex-wrap: wrap;
+}
+
+.cont-servicos i{
+    font-size: 20px;
+    color: #000;
+}
+
+.div-servicos img{
+    width:  100%;
+}
+ 
+.cont-servicos div{ 
+     
+    border-radius: 15px;
+    box-shadow: 6px 6px 8px rgb(65, 101, 201);
+    background-color: #f2f2f2;
+    color: #000000;
+    margin-bottom: 30px;
+    padding: 27px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cont-servicos h2{
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: #0047FF;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    height: 30px;
+} 
+
+.cont-servicos p{
+    font-size: 16px;
+    height: 200px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-weight: 300;
+}
+
+.cont-servicos i{
+    text-align: center;
+}
+
+#btnServ {
+    text-decoration: none;
+    align-self: flex-end;
+    padding: 7px 12px;
+    border-radius: 10px;
+    border: 0;
+    background-color: #2A92A9;
+    letter-spacing: 0.5px;
+    font-size: 12px;
+    transition: all .3s ease;
+    box-shadow: #2b8194 0px 10px 0px 0px;
+    color: hsl(0, 0%, 100%);
+}
+   
+#btnServ:hover {
+    box-shadow: #188199 0px 7px 0px 0px;
+}
+   
+#btnServ:active {
+    background-color: #2A92A9;
+    box-shadow: #188199 0px 0px 0px 0px;
+    transform: translateY(5px);
+    transition: 200ms;
+}
+
+/* #endregion serviços */
+
+
+
+/* #region etapas do site */
+.etapas{
+    text-align: start;
+}
+
+.etapas span{
+    color: #00FF19;
+}
+
+.titEtapas h2{
+    font-size: 27px;
+    margin-top: 150px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 20px;
+    width: 30%;
+    flex-wrap: wrap;
+}
+
+.titEtapas p{
+    font-size: 18px;
+    font-weight: 200;
+    margin-bottom: 40px;
+    width: 83%;
+}
+
+.cont-etapas h2{
+    display: flex;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 40px;
+    font-size: 18px;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    border-radius: 50%;
+    padding: 15px 17px;
+    width: 1.1%;
+}
+
+.cont-etapas h3{
+    color: #00FF19;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.cont-etapas p{
+    font-weight: 300;
+}
+
+/* #endregion etapas do site */
+
+/* #region trabalhe conosco */
+.trabalheConosco{
+    display: flex;
+    justify-content: center;
+}
+.trabalheConosco div{
+    margin-top: 130px;
+    background-color: #252525;
+    border: solid 1px #fff;
+    text-align: center;
+    border-radius: 60px;
+    padding: 30px 60px;
+    width: 70%;
+    margin-bottom: 5%;
+}
+
+.trabalheConosco h2{
+    font-weight: bold;
+    font-size: 23px;
+    margin-bottom: 30px;
+}
+
+.trabalheConosco h3{
+    font-weight: 200;
+    margin-bottom: 60px;
+}
+
+.trabalheConosco a{
+    text-decoration: none;
+    color: #000000;
+    background-color: #2A92A9;
+    padding: 20px 20px;
+    border-radius: 30px;
+    border: solid 1px #0047FF;
+    font-weight: bold;
+}
+
+/* #endregion trabalhe conosco */
+
+   
+/* #region rodape */
+.rodape{
+    background-color: #57afa2;
+    padding-bottom: 50px;
+    background-image: url(../img/fundo-rodape.png);
+}
+
+.rodape img{
+    margin-top: 70px;
+}
+
+.cont-roda{
+    display: flex;
+}
+
+.caixaRodape1{
+    margin-left: 80px;
+    width: 16%;
+}
+
+.caixaRodape1 p{
+    color: #000000;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.caixaRodape1 h2{
+    margin-top: 80px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #000000;
+}
+
+.caixaRodape2{
+    display: flex;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    justify-content: space-between;
+}
+
+.caixaRodape2 div:nth-child(1){
+    margin-top: 60px;
+    margin-left: 300px;
+}
+
+.caixaRodape2 div:nth-child(2){
+    margin-top: 60px;
+    margin-left: 100px;
+}
+
+.caixaRodape2 div:nth-child(3){
+    margin-top: 60px;
+    margin-left: 100px;
+}
+
+.caixaRodape2 h2{
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #000000;
+    font-size: 19px;
+    text-transform: uppercase;
+}
+
+.caixaRodape2 a{
+    text-decoration: none;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-weight: 300;
+}
+
+.caixaRodape2 a:hover{
+    color: #000;
+}
+
+#linksRoda{
+    display: flex;
+    flex-direction: column;
+}
+
+/* #endregion rodapé */
+
+
+/* #################################################*/
+
+
+/* #region responsive */
+
+/* 601 até 900px para not - INICIO */
+@media (max-width:900px) /*  define uma largura para uso especifico no responsivo */  {
+    .btnMenu button{
+        display: none;
+        margin-left: 49px
+        
+    }
+
+    .menu ul li a{
+        margin-left: -20px;
+    }
+
+    .servicos h2 {
+        margin-left: 22px;
+    }
+
+    .servicos p {
+        margin-left: 113px;
+        width: 74%;
+    }
+
+    .caixaRodape2{
+        margin-left: -223px;
+    }
+    .rodape{
+        background-color: #60E1CB;
+        width: 100%;
+    }
+}
+
+   
+
+/* 601 até 900px para not - FIM */
+
+
+/* ################################################ */
+
+
+/* 0 a 600px para celular - INICIO */
+@media (max-width: 600px){    
+.topo{
+    flex-direction: row;
+}
+
+.topo, .sobre{
+    background-attachment: fixed;
+    box-shadow: 0px 8px 10px rgb(51, 48, 48);
+}
+
+.logo{
+    margin-right: 100px;
+}
+
+.menu{
+    background-color: rgba(0, 0, 0, 0.95);
+    height: 100%;
+    position: fixed;
+    margin: 0;
+    top: 0;
+    right: -350px;
+    max-width: 350px;
+    width: 50%;
+    z-index: 9;    
+    transition: right .6s ease-out;                     
+}
+
+.menu ul{
+    flex-direction: column;
+}
+
+.menu ul li{
+    margin: 5% 0;
+}
+
+.linha{
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #ffffff
+}
+
+.btnMenu button{
+    display: none;
+}
+
+.menu-abrir{
+    background: url(../img/menu-abrir.png);
+    background-size: cover;
+    display: block;
+    padding: 20px;
+    border: 0;
+}
+
+.menu-fechar{
+    background: url(../img/menu-fechar.png);
+    background-size: cover;
+    display: block;
+    padding: 20px;
+    border: 0;
+}
+
+.menu-ativo .menu{
+    right: 0;
+}
+
+.login-menu{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin-top: 10%;
+    margin-left: 17%;
+    text-decoration: none;
+    padding: 1.3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.726);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    outline: none;
+}
+
+.login-menu:hover{
+    background-color: #2A92A9;
+    box-shadow: 0px 5px 20px rgba(46, 229, 157, 0.4);
+}
+
+.login-menu:active{
+    background-color: #584bd1;
+}
+
+
+    /* #region responsive serviços */
+.servicos h2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.4rem;
+    color: #2A92A9;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 30px;
+}
+
+.servicos p{
+    display: flex;
+    width: 75%;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 200;
+    margin: 0 auto;
+
+}
+
+.cont-servicos img{
+    display: flex;
+    width: 20px;
+    height: 20px;
+}
+     
+.cont-servicos div{ 
+    width: 100%;
+    height: 180px;
+    box-shadow: none; 
+    border-radius: 0;
+    background-color: #171717;
+    margin-bottom: 0;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+    
+.cont-servicos h2{
+    width: 100%;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #0047FF;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    height: 40px;
+} 
+    
+.cont-servicos p{
+    font-size: 0.9rem;
+    height: 200px;
+    color: aliceblue;
+}
+
+
+.cont-servicos i{
+    width: 10%;
+    margin-left: 45%;
+    color: #d6d6d6;
+    font-size: 20px;
+
+}
+
+#btnServ {
+    display: none;
+}
+
+.servico1 {
+    margin-top: 60px;
+}
+
+    /* #endregion responsive serviços */
+
+    
+    /* #region responsive trabalhe conosco */
+
+    /* #endregion responsive trabalhe conosco */
+
+  
+    /* #region responsive blog */
+
+.cookies{
+    right: 5%;
+}
+
+.whatsapp{
+    display: none;
+    right: 5%;
+}
+    /* #endregion responsive blog */
+
+ /* #region responsive rodapé */
+
+.rodape{
+    background-image: url(../img/fundo-rodape.png);
+}
+
+.cont-roda{
+    flex-direction: column;
+    text-align: center;
+    margin: 0 5%;
+}
+    
+.caixaRodape1{
+    width: 90%;
+    margin: 0;
+}
+    
+.caixaRodape1 p{
+    width: 100%;
+}
+    
+.caixaRodape1 h2{
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+    
+.caixaRodape2{
+    flex-direction: column;
+    font-family: 'Inter'sans-serif;
+}
+    
+.caixaRodape2 div:nth-child(1){
+    margin-top: 60px;
+    margin-left: 0;
+    text-align: end;
+}
+    
+.caixaRodape2 div:nth-child(2){
+    margin-top: 60px;
+    margin-left: 0px;
+    text-align: start;
+}
+    
+.caixaRodape2 div:nth-child(3){
+    margin-top: 60px;
+    margin-left: 0px;
+    text-align: end;
+}
+    
+.caixaRodape2 h2{
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+}
+    
+.caixaRodape2 a{
+    font-size: 15px;
+    color: #ffffff;
+}
+
+.caixaRodape2 a:hover{
+    color: #5e5e5e;
+}
+    
+#linksRoda{
+    flex-direction: column;
+}
+
+.etapas{
+    margin: 0 auto;
+    width: 90%;
+}
+
+.cont-etapas h2{
+    width: 3%;
+}
+
+.cont-etapas p {
+    width: 70%;
+}
+    /* #endregion responsive rodapé */
+}
+
+/* 601 a 900px para celular - FIM */
+/* #endregion responsive */

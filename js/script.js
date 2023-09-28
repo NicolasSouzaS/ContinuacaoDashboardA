@@ -1,8 +1,11 @@
-
-
-
 //  aqui eu criei para a palavra "website" do sobre ficar escrevendo sozinho
-
+var typingeffect = new Typed(".digitando", {
+  strings: ["WEBSITE"],
+  loop: true,
+  typeSpeed: 150,
+  backSpeed: 100,
+  backDelay: 1500,
+});
 
 // aqui eu criei para quando clicar no link do cookies a div sumir
 const linksCookies = document.getElementsByClassName('linksCookies');
@@ -30,31 +33,78 @@ document.querySelector(".menu-fechar").onclick = function () {
 }
 
 // carrosel serviços realizados
-$('.slide-servRealizados').slick({
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  autoplay: true,
-  dots: true,
-  autoplaySpeed: 3000,
-});
-
 $('.slide-avaliacoes').slick({
   slidesToShow: 1,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 3000,
-});
-
-$('.slide-blog').slick({
-  slidesToShow: 3,
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 2000,
 });
 
+
 $('.slide-servRealizados').slick({
   dots: true,
   infinite: false,
+  speed: 300,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  responsive: [    
+    {
+      breakpoint: 1100,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
+
+$('.slide-blog ').slick({
+  dots: true,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+
+    {
+      breakpoint: 845,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 380,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
+
+$('.slide-servRealizados').slick({
+  dots: true,
+  infinite: true,
   speed: 300,
   slidesToShow: 3,
   slidesToScroll: 1,
@@ -76,7 +126,7 @@ $('.slide-servRealizados').slick({
       }
     },
     {
-      breakpoint: 480,
+      breakpoint: 380,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1
@@ -86,15 +136,8 @@ $('.slide-servRealizados').slick({
   ]
 });
 
-
-document.getElementById("abrir").onclick = ()=>{
-  document.querySelector(".menu").style.display = "block"
-
+function linkWhats(){
+  var numFone = '5511978456588'
+  window.open('https://api.whatsapp.com/send?phone=' + numFone)
 }
 
-
-
-document.getElementById("fechar").onclick = ()=>{
-  document.querySelector(".menu").style.display = "none"
-
-}
