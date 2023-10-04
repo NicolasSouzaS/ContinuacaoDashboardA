@@ -21,7 +21,7 @@ require_once('admin/class/servico.php');
             <div class="cont-servicos site">
             <?php foreach($listar as $linha): ?>
                 <div>
-                    <i class="fa-solid fa-newspaper"></i>
+                    <?php echo $linha['iconServico']?>
                     <h2><?php echo $linha['tituloBlocoServico']?></h2>
                     <p><?php echo $linha['textoBlocoServico']?></p>
                     <a href="#" id="btnServ">Saiba mais...</a>

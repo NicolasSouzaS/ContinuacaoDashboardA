@@ -14,19 +14,39 @@
 
 <h1>Listagem Servico</h1> 
 
-<a style="text-decoration: none; color: white;" href="index.php?p=insert"><div style="display: flex; margin-top: 23px; cursor: pointer; width:205px;">
-          <ion-icon style="font-size: 20pt; margin-right: 5px;" name="add-circle-outline"></ion-icon>
-          <a style="text-decoration: none; color: white;" href="index.php?p=insert"><h2 style="font-size: 15pt;">Adicionar Serviço</h2></a>
+<a style="text-decoration: none; color: white;" href="index.php?p=insertServico"><div style="display: flex; margin-top: 23px; cursor: pointer; width:205px;">
+<button class="Btn">
+  
+  <div class="sign">+</div>
+  
+  <div class="text">Serviço</div>
+</button>
 </div></a>
 
 <?php
 require_once('listar.php');
 ?>
 
-<script src="js/bootstrap.min.js"></script>
+<?php
+
+        $pagina = @$_GET['p'];
+        
+        switch ($pagina) {
+          case 'servico':
+            require_once('servico/servico.php');
+            break;
+          case 'insert':
+            require_once('servico/inserir.php');
+            break;          
+        }
+      ?>
+
+<script src="/js/bootstrap.min.js"></script>
 
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <script src="/js/script.js"></script>
 
 </body>
 </html>

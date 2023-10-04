@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="css/estilo.css">
   <link rel="shortcut icon" href="assets/fav.png">
 </head>
-
 <body>
   <header>
     <nav style="background-color: #171717 !important;" class="navbar bg-body-tertiary">
@@ -77,13 +76,17 @@
           case 'site':
             require_once('site/site.php');
             break;
-            case 'insert':
-              require_once('servico/inserir.php');
-              break;
-          default:
+          
+          case 'insertServico':
+            require_once('servico/inserir.php');
+            break;
+          case 'insertBlog':
+            require_once('blog/inserir.php');
+            break;
+            default:
           echo'<h1>DASHBOARD</h1>';
           break;
-          
+         
         }
       ?>
       </div>
@@ -94,6 +97,11 @@
 
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <script src="js/script.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
 </body>
 
 </html>

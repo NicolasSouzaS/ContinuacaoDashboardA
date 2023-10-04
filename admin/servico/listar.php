@@ -19,8 +19,8 @@
 
 <div>
 
-<table class="table table-dark table-borderless">
-    <caption>Conteudo Serviço</caption>
+<table class="input__container-blog table table-dark table-borderless">
+    <caption style="color:white; text-align:center; font-size:20pt" class="input__container-blog">Conteudo Serviço</caption>
         <thead>
             <tr>
                 <th>ID</th>
@@ -38,13 +38,37 @@
             <?php foreach($listar as $linha): ?>
             <tr>
                 <td><?php echo $linha['idServico']?></td>
-                <td><?php echo $linha['iconServico']?></td>
+                <td>
+                    <?php
+                    if($linha['iconServico'] == NULL){
+                        echo 'SEM ICONE';
+                    }else{
+                        echo $linha['iconServico'];
+                    }
+                    ?>
+                </td>
                 <td><?php echo $linha['tituloBlocoServico']?></td>
                 <td><?php echo $linha['textoBlocoServico']?></td>
-                <td><?php echo $linha['linkSaiba']?></td>
-                <td><?php echo $linha['statusServico']?></td>
+                <td>
+                    <?php
+                     if($linha['linkSaiba'] == NULL){
+                        echo 'SEM LINK';
+                    }else{
+                        echo $linha['linkSaiba'];
+                    }
+                    ?>
+                </td>
+
+                <td><?php 
+                    if($linha['statusServico'] ==1){
+                        echo 'ATIVO';
+                    }else{
+                        echo 'DESATIVADO';
+                    }
+                ?></td>
+
                 <td><a href="index.php?p=servico&s=atualizar">ATUALIZAR</a></td>
-                <td><a href="index.php?p=servico&s=desativar"></a>DESATIVAR</td>
+                <td><a href="index.php?p=servico&s=desativar">DESATIVAR</a></td>
             </tr>
             <?php endforeach ?>
         </tbody>

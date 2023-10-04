@@ -2,8 +2,8 @@
 <?php
 
 require_once('admin/class/blog.php');
-    $listarBlog = new BlogCass();
-    $blog = $listarBlog->ListarBlog();
+    $listarBlogN = new BlogCass();
+    $blog = $listarBlogN->ListarBlog();
     var_dump($blog);
 ?>
 

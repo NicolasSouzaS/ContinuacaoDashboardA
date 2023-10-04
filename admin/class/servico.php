@@ -23,4 +23,18 @@
             return $lista;
         }
 
+
+        public function Inserir(){
+            $query = "INSERT INTO tblservico (`tituloBlocoServico`,
+                                            'iconServico', 
+                                            `textoBlocoServico`, `linkSaiba`, `statusServico`)
+            VALUES('".$this->tituloBlocoServico."',
+                    '".$this->iconServico."',
+                    '".$this->textoBlocoServico."',
+                    'testeLink',
+                    '1');";
+            $conn = Conexao::abrirConexao();
+            $conn->exec($query);
+            echo "<script>document.location='index.php?p=servico'</script>";
+        }
     };

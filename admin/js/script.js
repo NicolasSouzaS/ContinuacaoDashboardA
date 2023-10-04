@@ -1,9 +1,12 @@
-function Limpar(){
-    inputTitulo = document.getElementById("inputTitulo");
-    inputIcon = document.getElementById("inputIcon");
-    txtArea = document.getElementById("txtArea");
+    var inputTitulo = document.getElementById("inputTitulo");
 
-    inputTitulo = "";
-    inputIcon = "";
-    txtArea = "";
-}
+    var inputIcon = document.getElementById("inputIcon");
+
+    var txtArea = document.getElementById("txtArea");
+
+    function Limpar(){
+        
+        inputTitulo.value = "";
+        inputIcon.value = "";
+        txtArea.value = "";
+    }
