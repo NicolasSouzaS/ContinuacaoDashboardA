@@ -1257,8 +1257,8 @@
 }
 
 .a-flip-right {
-  -webkit-animation: flipRight 1s ease-out 1;
-          animation: flipRight 1s ease-out 1;
+  -webkit-animation: flipRight 2s ease-out 2;
+          animation: flipRight 2s ease-out 2;
 }
 
 @-webkit-keyframes flipRight {

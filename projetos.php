@@ -428,7 +428,7 @@ if (isset($_POST['email'])) {
             <input type="tel" id="telefone" placeholder="Telefone">
             <input type="text" id="objetivo" placeholder="Objetivo conosco">
         </div>
-        <button onclick="" id="solicitacao">
+        <button type="submit" onclick="" id="solicitacao">
             Solicitar
         </button>
 

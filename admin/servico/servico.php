@@ -24,29 +24,24 @@
 </div></a>
 
 <?php
-require_once('listar.php');
-?>
 
-<?php
-
-        $pagina = @$_GET['p'];
+        $pagina = @$_GET['b'];
         
         switch ($pagina) {
-          case 'servico':
-            require_once('servico/servico.php');
-            break;
           case 'insert':
             require_once('servico/inserir.php');
-            break;          
+            break;
+          default:
+          require_once('listar.php') ;    
         }
       ?>
 
-<script src="/js/bootstrap.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
 
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-  <script src="/js/script.js"></script>
+  <script src="./js/script.js"></script>
 
 </body>
 </html>

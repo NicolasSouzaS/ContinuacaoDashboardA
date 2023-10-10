@@ -76,7 +76,7 @@
           case 'site':
             require_once('site/site.php');
             break;
-          
+
           case 'insertServico':
             require_once('servico/inserir.php');
             break;
