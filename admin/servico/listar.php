@@ -69,8 +69,10 @@
                     }
                 ?></td>
 
-                <td><a href="index.php?p=servico&s=atualizar">ATUALIZAR</a></td>
-                <td><a href="index.php?p=servico&s=desativar">DESATIVAR</a></td>
+                <td><a href="index.php?p=servicoAtualizar&s=atualizar
+                &id=<?php echo $linha['idServico']?>">ATUALIZAR</a></td>
+                <td><a href="index.php?p=servicoDesativar&s=desativar&
+                id=<?php echo $linha['idServico']?>">DESATIVAR</a></td>
             </tr>
             <?php endforeach ?>
         </tbody>

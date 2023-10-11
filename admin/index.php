@@ -83,7 +83,13 @@
           case 'insertBlog':
             require_once('blog/inserir.php');
             break;
-            default:
+          case 'servicoAtualizar':
+            require_once('servico/atualizar.php');
+          break;
+          case 'servicoDesativar':
+            require_once('servico/desativar.php');
+          break;
+          default:
           echo'<h1>DASHBOARD</h1>';
           break;
          

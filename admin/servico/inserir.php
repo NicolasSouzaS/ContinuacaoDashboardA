@@ -25,17 +25,17 @@ if(isset($_POST['inputTitulo'])){
     $iconServico        = $_POST['inputIcon'];
     $statusServico      = $_POST['statusServico'];
 
-     $arquivo = $_FILES['inputIcon'];
+    //  $arquivo = $_FILES['inputIcon'];
 
-     if($arquivo['error']){
-         throw new Exception('Error'. $arquivo['error']);
-     }
+    //  if($arquivo['error']){
+    //      throw new Exception('Error'. $arquivo['error']);
+    //  }
     
-     if(move_uploaded_file($arquivo['tmp_name'], '../img/Servico' . $arquivo['name'])){
-         $iconServico = 'Servico/' . $arquivo['name'];
-     }else{
-         throw new Exception('Erro não foi possível realizar o upload:');
-     }
+    //  if(move_uploaded_file($arquivo['tmp_name'], '../img/Servico' . $arquivo['name'])){
+    //      $iconServico = 'Servico/' . $arquivo['name'];
+    //  }else{
+    //      throw new Exception('Erro não foi possível realizar o upload:');
+    //  }
 
     $servico = new ServicoClass();
 
