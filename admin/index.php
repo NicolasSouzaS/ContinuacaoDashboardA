@@ -75,14 +75,16 @@
             break;
           case 'site':
             require_once('site/site.php');
-            break;
-
+          break;
           case 'insertServico':
             require_once('servico/inserir.php');
-            break;
+          break;
           case 'insertBlog':
             require_once('blog/inserir.php');
-            break;
+          break;
+          case 'insertProjeto':
+            require_once('portfolio/inserir.php');
+          break;
           case 'servicoAtualizar':
             require_once('servico/atualizar.php');
           break;

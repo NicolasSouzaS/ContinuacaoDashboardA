@@ -21,13 +21,8 @@ $servico = new ServicoClass($id);
 
 
 
-if(isset($_POST['inputTitulo'])){
+if(isset($_POST['statusServico'])){
     
-    
-
-    $tituloBlocoServico = $_POST['inputTitulo'];
-    $textoBlocoServico  = $_POST['txtArea'];
-    $iconServico        = $_POST['inputIcon'];
     $statusServico      = $_POST['statusServico'];
 
 
@@ -47,12 +42,10 @@ if(isset($_POST['inputTitulo'])){
     // }else{
     //     $iconServico = $servico->iconServico;
     // }
-    $servico->tituloBlocoServico = $tituloBlocoServico;
-    $servico->textoBlocoServico = $textoBlocoServico;
-    $servico->iconServico = $iconServico;
+   
     $servico->statusServico = $statusServico;
     
-    $servico->Atualizar();
+    $servico->Desativar();
 
 };
 
@@ -69,12 +62,12 @@ if(isset($_POST['inputTitulo'])){
 </section>
 
 <div class="container-fluid page-height d-flex justify-content-center align-items-center">
-    <form action="index.php?p=servicoAtualizar&id=<?php echo $servico->idServico?>" method="POST" enctype="multipart/form-data" class="container-md">
+    <form action="index.php?p=servicoDesativar&id=<?php echo $servico->idServico?>" method="POST" enctype="multipart/form-data" class="container-md">
         <div class="input__containerDesav">
            <h2 class="container d-flex justify-content-center align-items-center">Você tem certeza que deseja desativar este serviço ?</h2>
            <div style="margin-left:5%; margin-top: 10%; width:100%;">
             <a href="index.php?p=servico"><button style="margin-right:55%; color:black; background-color:white;" id="btnLimpar">Não</button></a>
-            <button style="color:black; background-color:white;" type="submit">Sim</button>
+            <button name="statusServico" style="color:black; background-color:white;" value="0" type="submit">Sim</button>
             </div>
         </div>
     </form>

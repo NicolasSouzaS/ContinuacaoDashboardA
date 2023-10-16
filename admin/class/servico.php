@@ -73,8 +73,8 @@
 
         public function Desativar(){
             $query = "UPDATE tblservico SET      
-                      statusServico       ='0'
-                      WHERE servico.idServico =" .$this->idServico;
+                      statusServico ='0'
+                      WHERE idServico =" .$this->idServico;
                       
             $conn = Conexao::abrirConexao();
             $conn->exec($query);

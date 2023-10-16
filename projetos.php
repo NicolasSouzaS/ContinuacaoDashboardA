@@ -182,6 +182,13 @@ if (isset($_POST['email'])) {
 
 ?>
 
+<?php
+
+require_once('admin/class/portfolio.php');
+    $listaPortfolio = new PortfolioClass;
+    $listar = $listaPortfolio->ListarImgs();
+?>
+
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -282,26 +289,16 @@ if (isset($_POST['email'])) {
     <section class="main-portfolio container">
         <h3>Projetos</h3>
         <div data-aos="fade-right" class="parte-cima">
+        <?php foreach($listar as $linha): ?>
             <div class="projetos-feitos et_pb_gallery_image landscape">
                 <a href="javascript:void">
-                    <img decoding="async" width="400" height="284" src="./img/projetos/projeto1.png">
+                    
+                    <img decoding="async" width="400" height="284" src="./img/projetos/<?php echo $linha['imgPortfolio'] ?>">
+                   
                 </a>
             </div>
-            <div class="projetos-feitos et_pb_gallery_image landscape">
-                <a href="javascript:void">
-                    <img decoding="async" width="400" height="284" src="./img/projetos/projeto2.png">
-                </a>
-            </div>
-            <div class="projetos-feitos et_pb_gallery_image landscape">
-                <a href="javascript:void">
-                    <img decoding="async" loading="lazy" width="400" height="284" src="./img/projetos/projeto3.png">
-                </a>
-            </div>
-            <div class="projetos-feitos et_pb_gallery_image landscape">
-                <a href="javascript:void">
-                    <img decoding="async" loading="lazy" width="400" height="284" src="./img/projetos/projeto4.png">
-                </a>
-            </div>
+        <?php endforeach ?>
+            
         </div>
 
 
