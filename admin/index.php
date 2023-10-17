@@ -88,8 +88,14 @@
           case 'servicoAtualizar':
             require_once('servico/atualizar.php');
           break;
+          case 'projetoAtualizar':
+            require_once('portfolio/atualizar.php');
+          break;
           case 'servicoDesativar':
             require_once('servico/desativar.php');
+          break;
+          case 'projetoDesativar':
+            require_once('portfolio/desativar.php');
           break;
           default:
           echo'<h1>DASHBOARD</h1>';

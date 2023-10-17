@@ -48,9 +48,9 @@
                         echo 'DESATIVADO';
                     }?></td>
 
-                <td><a href="index.php?p=servicoAtualizar&s=atualizar
+                <td><a href="index.php?p=projetoAtualizar&s=atualizar
                 &id=<?php echo $linha['idPortfolio']?>">ATUALIZAR</a></td>
-                <td><a href="index.php?p=servicoDesativar&s=desativar&
+                <td><a href="index.php?p=projetoDesativar&s=desativar&
                 id=<?php echo $linha['idPortfolio']?>">DESATIVAR</a></td>
             </tr>
             <?php endforeach ?>
