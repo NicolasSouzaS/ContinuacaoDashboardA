@@ -39,7 +39,7 @@
                 <td class="container d-flex justify-content-center align-items-center"><?php echo $linha['idPortfolio']?></td>
             
                 <td>
-                   <?php echo $linha['imgPortfolio'] ?>
+                   <?php echo $linha['imgProjeto'] ?>
                 </td>
 
                 <td><?php if($linha['statusPortfolio'] ==1){

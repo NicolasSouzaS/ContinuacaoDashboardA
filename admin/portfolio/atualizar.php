@@ -33,7 +33,7 @@ if(isset($_POST['statusPortfolio'])){
         }
        
         if(move_uploaded_file($arquivo['tmp_name'], '../img/projetos/' . $arquivo['name'])){
-            $imgPortfolio = '' . $arquivo['name'];
+            $imgProjeto = '' . $arquivo['name'];
         }else{
             throw new Exception('Erro não foi possível realizar o upload:');
         }
@@ -44,7 +44,7 @@ if(isset($_POST['statusPortfolio'])){
 
 
     $portfolio->statusPortfolio = $statusPortfolio;
-    $portfolio->imgPortfolio = $imgPortfolio;
+    $portfolio->imgProjeto = $imgProjeto;
     $portfolio->Atualizar();
 
 };

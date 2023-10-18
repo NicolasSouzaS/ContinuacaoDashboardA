@@ -293,7 +293,7 @@ require_once('admin/class/portfolio.php');
             <div class="projetos-feitos et_pb_gallery_image landscape">
                 <a href="javascript:void">
                     
-                    <img decoding="async" width="400" height="284" src="./img/projetos/<?php echo $linha['imgPortfolio'] ?>">
+                    <img decoding="async" width="400" height="284" src="./img/projetos/<?php echo $linha['imgProjeto'] ?>">
                    
                 </a>
             </div>
