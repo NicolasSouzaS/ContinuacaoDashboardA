@@ -1,3 +1,20 @@
+<?php
+
+
+  session_start();
+  $msgErro = '';
+
+  if(!isset($_SESSION['login'])){
+    header("Location:login.php");
+  }
+
+  require_once('class/login.php');
+  $usuario = new Login();
+  $usuario->idUsuario = $_SESSION['idUser'];
+  $usuario->VerificarLogin();
+  var_dump($usuario);
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
