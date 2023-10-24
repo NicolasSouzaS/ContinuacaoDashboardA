@@ -80,4 +80,6 @@
             $conn->exec($query);
             echo "<script>document.location='index.php?p=servico'</script>";
         }
+
+        
     };

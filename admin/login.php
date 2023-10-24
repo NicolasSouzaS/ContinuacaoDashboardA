@@ -14,17 +14,21 @@ if(isset($_POST['email'])){
     $login->senhaUsuario = $senha;
     
     $dadosLogin = $login->VerificarLogin();
-    //var_dump($dadosLogin);
+    // var_dump($dadosLogin);
 
     if($dadosLogin == NULL){
-        $msgErro = "Erro de tentativa de login. Tente novamente.";   
+      
+      echo ('<div style="display:flex; justify-content:space-between; height:6%;" class="alert alert-primary" role="alert"><p>Erro ao tentar logar. Tente novamente!</p> <a href="http://localhost/Site-AscensaoDev/admin/login.php"><ion-icon style="color:black; font-size:20pt;" name="close-outline"></ion-icon></a></div>');
+      
     }
     else{
         $_SESSION['login'] = $dadosLogin['emailUsuario'];
         $_SESSION['idUser'] = $dadosLogin['idUsuario'];
-
+        $_SESSION['nomeUser'] = $dadosLogin['nomeUsuario'];
+        $_SESSION['fotoUser'] = $dadosLogin['fotoUsuario'];
+        $_SESSION['senhaUser'] = $dadosLogin['senhaUsuario'];
         header('location:index.php');
-        exit();
+        
     }
 }
 
@@ -48,74 +52,9 @@ if(isset($_POST['email'])){
     margin: 0;
     color:white;
 }
-
     label{
             color:white;
         }
-
-        button {
-  width: 10%;
-  --primary-color: black;
-  --secondary-color: white;
-  --hover-color: white;
-  --arrow-width: 10px;
-  --arrow-stroke: 2px;
-  box-sizing: border-box;
-  border: 0;
-  border-radius: 20px;
-  color: var(--secondary-color);
-  padding: 1em 1.8em;
-  background: var(--primary-color);
-  display: flex;
-  transition: 0.2s;
-  align-items: center;
-  gap:1em;
-  font-weight: bold;
-  font-size:13pt;
-}
-
-button .arrow-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-button .arrow {
-  margin-top: 1px;
-  width: var(--arrow-width);
-  background: var(--primary-color);
-  height: var(--arrow-stroke);
-  position: relative;
-  transition: 0.2s;
-}
-
-button .arrow::before {
-  content: "";
-  box-sizing: border-box;
-  position: absolute;
-  border: solid white;
-  border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
-  display: inline-block;
-  top: -3px;
-  right: 3px;
-  transition: 0.2s;
-  padding: 3px;
-  transform: rotate(-45deg);
-}
-
-button:hover {
-  background-color: var(--hover-color);
-}
-
-button:hover .arrow {
-  background: black;
-  color:black;
-}
-
-button:hover .arrow:before {
-  right: 0;
-}
-
 .inputContainer {
   position: relative;
   display: flex;
@@ -178,6 +117,48 @@ button:hover .arrow:before {
   transition-duration: .3s;
 }
 
+.btn {
+  display: inline-block;
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #fff;
+  margin: 1rem auto;
+  padding: 0.7rem 2rem;
+  border-radius: 30em;
+  border-style: none;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-color: transparent;
+  box-shadow: 1px 1px 12px #000000;
+}
+
+.btn::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  transform: translateX(-101%);
+  transition: all .3s ease;
+  z-index: -1;
+}
+
+.btn:hover {
+  color: #272727;
+  transition: all .3s ease;
+}
+
+.btn:hover::before {
+  transform: translateX(0);
+}
+
 </style>
 
 <div style="text-align:center; margin-top:7%;" class="container">
@@ -204,15 +185,14 @@ button:hover .arrow:before {
     <label class="form-check-label" for="exampleCheck1">Manter logado</label>
   </div>
 
-  <button type="submit">
-    Login
-    <div class="arrow-wrapper">
-        <div class="arrow"></div>
-
-    </div>
+  <button style="width:10%;height:5%;" class="btn">
+  Login
+</button>
 </button>
 
 </form>
 
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

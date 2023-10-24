@@ -2,7 +2,6 @@
 
 
   session_start();
-  $msgErro = '';
 
   if(!isset($_SESSION['login'])){
     header("Location:login.php");
@@ -11,8 +10,14 @@
   require_once('class/login.php');
   $usuario = new Login();
   $usuario->idUsuario = $_SESSION['idUser'];
-  $usuario->VerificarLogin();
+  $usuario->nomeUsuario = $_SESSION['nomeUser'];
+  $usuario->fotoUsuario = $_SESSION['fotoUser'];
+  $usuario->senhaUsuario = $_SESSION['senhaUser'];
+  // $usuario->emailUsuario = $_SESSION['login'];
+  $dadosLogin = $usuario->VerificarLogin();
   var_dump($usuario);
+
+  
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +39,7 @@
         <div class="navPerfil">
 
           <img id="iconPessoa" src="assets/iconPessoa-removebg-preview.png" alt="">
-          <h2 id="nomePessoa">Admin</h2>
+          <h2 id="nomePessoa"><?php echo $usuario->nomeUsuario; ?></h2>
         </div>
       </div>
     </nav>

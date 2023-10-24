@@ -2,6 +2,54 @@
     require_once('class/servico.php');
     $listaServico = new ServicoClass();
     $listar = $listaServico->ListarStatusOn();
+
+    // Verifica se a requisição veio do AJAX e chama o método LISTAR SERVIÇO DESATIVADO
+if (isset($_POST['status']) && !empty($_POST['status'])) {
+    $listaServico = new ServicoClass();
+    $status = $_POST['status'];
+    if ($status == 'desativarServico') {
+        //$listaServico->statusServico = 0;
+        $listar = $listaServico->ListarDesativado();
+ 
+        $html = '';
+        foreach ($listar as $linha) {
+            $html .= '<tr>
+                    <td>
+                        <a href="../img/' . $linha['imgServico'] . '" data-lightbox="image-1" data-title="Nome do Usuário">
+                            <img class="imgFotoTabela" src="../img/' . $linha['imgServico'] . '" alt="' . $linha['tituloServico'] . '">
+                        </a>
+                    </td>
+                    <td>' . $linha['tituloServico'] . '</td>
+                    <td>' . $linha['textoServico'] . '</td>
+                    <td class="imgIcon"><a href="index.php?p=servico&s=atualizar&id=' . $linha['idServico'] . '"><img src="img/pencil.png" alt="ATUALIZAR"></a></td>
+                    <td class="imgIcon"><a href="index.php?p=servico&s=desativar&id=' . $linha['idServico'] . '"><img src="img/bin.png" alt="DESATIVAR"></a></td>
+                </tr>';
+        }
+ 
+        echo $html;
+    } else if ($status == 'ativarServico') {
+ 
+        $listaServico->statusServico = 1;
+        $listar = $listaServico->Listar();
+ 
+        $html = '';
+        foreach ($listar as $linha) {
+            $html .= '<tr>
+                    <td>
+                        <a href="../img/' . $linha['imgServico'] . '" data-lightbox="image-1" data-title="Nome do Usuário">
+                            <img class="imgFotoTabela" src="../img/' . $linha['imgServico'] . '" alt="' . $linha['tituloServico'] . '">
+                        </a>
+                    </td>
+                    <td>' . $linha['tituloServico'] . '</td>
+                    <td>' . $linha['textoServico'] . '</td>
+                    <td class="imgIcon"><a href="index.php?p=servico&s=atualizar&id=' . $linha['idServico'] . '"><img src="img/pencil.png" alt="ATUALIZAR"></a></td>
+                    <td class="imgIcon"><a href="index.php?p=servico&s=desativar&id=' . $linha['idServico'] . '"><img src="img/bin.png" alt="DESATIVAR"></a></td>
+                </tr>';
+        }
+ 
+        echo $html;
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -20,6 +68,17 @@
 
 
 <div class="">
+
+<div style="margin-bottom:1%;">
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="ativarServico" name="customRadio" class="custom-control-input">
+                    <label class="custom-control-label" for="ativarServico">Listar Serviço Ativo</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="desativarServico" name="customRadio" class="custom-control-input">
+                    <label class="custom-control-label" for="desativarServico">Listar Serviço Desativado</label>
+                </div>
+</div>
 
 <table class="input__container-blog table table-dark table-borderless a-flip-right">
     <caption style="color:white; text-align:center; font-size:20pt" class="input__container-blog">Conteudo Serviço</caption>
@@ -87,5 +146,9 @@
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  
+
+  <script src="./js/script.js"></script>
 </body>
 </html>

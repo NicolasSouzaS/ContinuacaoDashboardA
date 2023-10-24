@@ -19,10 +19,8 @@ class Login{
         if(isset($this->emailUsuario)){
             $query = "SELECT * FROM tblusuario WHERE emailUsuario = '".$this->emailUsuario."' AND senhaUsuario = '".$this->senhaUsuario."'";
         }
-        else{
-            if(isset($this->idUsuario)){
-                $query = "SELECT * FROM tblusuario WHERE idUsuario = ".$this->idUsuario ; 
-            }
+        else if(isset($this->idUsuario)){
+            $query = "SELECT * FROM tblusuario WHERE idUsuario = '".$this->idUsuario."'" ;    
         }
 
         $query = "SELECT * FROM tblusuario WHERE emailUsuario = '".$this->emailUsuario."' AND senhaUsuario = '".$this->senhaUsuario."'";
