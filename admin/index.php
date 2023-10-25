@@ -12,10 +12,10 @@
   $usuario->idUsuario = $_SESSION['idUser'];
   $usuario->nomeUsuario = $_SESSION['nomeUser'];
   $usuario->fotoUsuario = $_SESSION['fotoUser'];
-  $usuario->senhaUsuario = $_SESSION['senhaUser'];
+  // $usuario->senhaUsuario = $_SESSION['senhaUser'];
   // $usuario->emailUsuario = $_SESSION['login'];
   $dadosLogin = $usuario->VerificarLogin();
-  var_dump($usuario);
+  // var_dump($usuario);
 
   
 ?>
@@ -38,7 +38,7 @@
         <a class="navbar-brand" href="index.php"><img src="assets/logo.png" alt=""></a>
         <div class="navPerfil">
 
-          <img id="iconPessoa" src="assets/iconPessoa-removebg-preview.png" alt="">
+          <img style="width:15%;" id="iconPessoa" src="../img/fotoUsuario/<?php echo $usuario->fotoUsuario; ?>" alt="">
           <h2 id="nomePessoa"><?php echo $usuario->nomeUsuario; ?></h2>
         </div>
       </div>
